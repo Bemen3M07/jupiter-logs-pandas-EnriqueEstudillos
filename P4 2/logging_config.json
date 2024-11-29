@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "formatters": {
+    "detailed": {
+      "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    }
+  },
+  "handlers": {
+    "file_handler": {
+      "class": "logging.FileHandler",
+      "level": "DEBUG",
+      "formatter": "detailed",
+      "filename": "app.log"
+    }
+  },
+  "loggers": {
+    "app_logger": {
+      "level": "DEBUG",
+      "handlers": ["file_handler"]
+    }
+  }
+}
